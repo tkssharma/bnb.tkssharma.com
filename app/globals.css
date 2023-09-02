@@ -1,0 +1,369 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root {
+  height: 100%;
+}
+
+.leaflet-bottom,
+.leaflet-control,
+.leaflet-pane,
+.leaflet-top {
+  z-index: 0 !important;
+}
+
+.rdrMonth {
+  width: 100% !important;
+}
+
+.rdrCalendarWrapper {
+  font-size: 16px !important;
+  width: 100% !important;
+}
+
+.banner {
+  background: url("https://media.cntraveler.com/photos/5db1d0dd11c1e500092e7133/master/pass/airbnb-ski-aspen-28328347.jpg") 50%;
+  position: relative;
+}
+
+.banner__search {
+  display: flex;
+  flex-direction: column;
+}
+
+.banner__search .banner__searchButton {
+  background-color: white !important;
+  font-weight: 900 !important;
+  text-transform: inherit !important;
+  color: #ff7779 !important;
+}
+
+.banner__info {
+  background-color: black;
+  color: white;
+  padding: 16vh 50px 40px 50px;
+  max-width: 400px;
+}
+
+@media screen and (max-width: 424px) {
+  .banner__info {
+    background-color: rgba(0, 0, 0, .5);
+  }
+}
+
+.banner__info button {
+  background-color: #ff7779;
+  color: white;
+  text-transform: inherit;
+  font-weight: 600;
+}
+
+.banner__info button:hover {
+  background-color: white;
+  color: #ff7779;
+}
+
+.banner__info h5 {
+  margin-top: 10px;
+}
+
+.home__nearby,
+.home__anywhere,
+.home__discover,
+.home__host {
+  padding: 0 80px;
+  margin-top: 60px;
+}
+
+@media screen and (max-width: 1200px) {
+
+  .home__nearby,
+  .home__anywhere,
+  .home__discover,
+  .home__host {
+    padding: 0 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .home__nearby,
+  .home__anywhere,
+  .home__discover,
+  .home__host {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+
+  .home__nearby,
+  .home__anywhere,
+  .home__discover,
+  .home__host {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+
+  .home__nearby,
+  .home__anywhere,
+  .home__discover,
+  .home__host {
+    margin-top: 30px;
+  }
+}
+
+.home__nearby>h1,
+.home__anywhere>h1,
+.home__discover>h1,
+.home__host>h1 {
+  padding-bottom: 16px;
+}
+
+@media screen and (max-width: 424px) {
+
+  .home__nearby>h1,
+  .home__anywhere>h1,
+  .home__discover>h1,
+  .home__host>h1 {
+    font-size: 25px;
+  }
+}
+
+
+.hostBanner {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  background-color: #222;
+}
+
+.hostBanner .hostBanner__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .hostBanner .hostBanner__img {
+    margin-top: 250px;
+    justify-content: flex-end;
+  }
+}
+
+.hostBanner .hostBanner__img img {
+  max-height: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+@media screen and (max-width: 768px) {
+  .hostBanner .hostBanner__img img {
+    min-width: 160%;
+  }
+}
+
+.hostBanner .hostBanner__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  color: #fff;
+  padding-left: 80px;
+  padding-right: 80px;
+  width: 544px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 992px) {
+  .hostBanner .hostBanner__info {
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hostBanner .hostBanner__info {
+    padding: 32px 32px 0 32px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .hostBanner .hostBanner__info {
+    padding: 32px 15px 0 15px;
+  }
+}
+
+.hostBanner .hostBanner__info h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 992px) {
+  .hostBanner .hostBanner__info h1 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .hostBanner .hostBanner__info h1 {
+    font-size: 30px;
+  }
+}
+
+.hostBanner .hostBanner__info h3 {
+  margin-bottom: 25px;
+}
+
+@media screen and (max-width: 424px) {
+  .hostBanner .hostBanner__info h3 {
+    font-size: 16px;
+  }
+}
+
+.hostBanner .hostBanner__info>button {
+  background-color: #fff !important;
+  text-transform: inherit !important;
+  padding: 14px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 424px) {
+  .hostBanner .hostBanner__info>button {
+    padding: 10px 20px;
+  }
+}
+
+.discover {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .discover {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto 30px auto;
+  }
+}
+
+.live-anywhere {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+@media screen and (max-width: 992px) {
+  .live-anywhere {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .live-anywhere {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.near-by {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+@media screen and (max-width: 992px) {
+  .near-by {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .near-by {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.nearby-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nearby-card img {
+  width: 64px;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+.nearby-card h3 {
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 2px;
+}
+.nearby-card h4 {
+  font-size: 16px;
+}
+
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 6px 18px -9px rgba(0, 0, 0, .75);
+  cursor: pointer;
+  transition: transform 100ms ease-in;
+}
+.card:hover {
+  transform: scale(1.07);
+}
+.card > img {
+  object-fit: fill;
+  min-width: 300px;
+  min-height: 200px;
+  width: 100%;
+}
+.card .card__info {
+  margin-top: -9px;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1;
+}
+.card h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.card h4 {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.footer {
+  border-top: 1px solid lightgray;
+  padding: 20px;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+.footer > p {
+  padding: 5px;
+  font-size: 14px;
+}
